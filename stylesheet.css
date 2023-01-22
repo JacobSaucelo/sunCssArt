@@ -1,0 +1,125 @@
+/* font-family: 'Bebas Neue', cursive;
+font-family: 'Inter', sans-serif; */
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  animation: backgroundLight 10s infinite;
+}
+
+body h1 {
+  color: white;
+  font-family: "Bebas Neue", cursive;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.frame {
+  height: 300px;
+  width: 300px;
+}
+
+.sun {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.sun div {
+  position: absolute;
+}
+
+.face {
+  background: url("face.png") center center / cover no-repeat;
+  image-rendering: pixelated;
+  height: 40%;
+  width: 40%;
+  z-index: 5;
+  animation: 5s faceSpin linear 0.1s alternate infinite;
+}
+
+.light {
+  background: url("red.png") center center / cover no-repeat;
+  image-rendering: pixelated;
+  height: 90%;
+  width: 90%;
+}
+
+.l1 {
+  animation: 5s spin linear 0.1s alternate infinite;
+  opacity: 0.8;
+  z-index: 4;
+}
+.l2 {
+  animation: 5s spin linear 0.2s alternate infinite;
+  opacity: 0.6;
+  z-index: 3;
+}
+.l3 {
+  animation: 5s spin linear 0.3s alternate infinite;
+  opacity: 0.4;
+  z-index: 2;
+}
+.l4 {
+  animation: 5s spin linear 0.4s alternate infinite;
+  opacity: 0.2;
+  z-index: 1;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateZ(0);
+  }
+  100% {
+    transform: rotateZ(-360deg);
+  }
+}
+
+@keyframes faceSpin {
+  0% {
+    transform: rotateZ(0);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes backgroundLight {
+  0% {
+    background-color: #df0a05;
+  }
+  1% {
+    background-color: black;
+  }
+  99% {
+    background-color: black;
+  }
+
+  100% {
+    background-color: #df0a05;
+  }
+}
+
+.textsInfo {
+  padding: 1rem;
+  color: white;
+  font-family: "Inter", sans-serif;
+}
+.textsInfo p {
+  text-align: center;
+}
+
+.textsInfo h1 {
+  color: #f0db4f;
+}
